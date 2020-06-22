@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #00d2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3a7bd5,
+    #00d2ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3a7bd5,
+    #00d2ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  font-family: "Arimo", sans-serif;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.title-container h1 {
+  font-size: 80px;
+  font-family: "Pacifico", cursive;
+}
+.title-container small {
+  font-size: 20px;
+}
+
+/* search form container */
+.search-container {
+  margin-top: 100px;
+}
+
+/* main */
+main {
+  margin-top: 100px;
+}
+.location {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+.current {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+/* .current img {
+  width: 200px;
+  height: 200px;
+} */

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Clima 🌦</title>
+  </head>
+  <body>
+    <div class="title-container">
+      <h1>Clima 🌦</h1>
+      <small>A Simple Weather App</small>
+    </div>
+    <div class="search-container">
+      <form class="search-form">
+        <input type="text" name="search" placeholder="Type in the City" />
+        <label for="unit">C</label>
+        <input type="radio" name="unit" value="C" checked />
+        <label for="unit">F</label>
+        <input type="radio" name="unit" value="F" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <main>
+      <image src="circles.svg" class="spinner"></image>
+      <div class="location">
+        <span class="location-name"></span>
+        <span class="location-region"></span>
+        <span class="location-country"></span>
+      </div>
+      <div class="current">
+        <span class="current-desc"></span>
+        <span class="current-temp"></span>
+        <span class="current-feels"></span>
+        <!-- <image  alt="" class="current-img"></image> -->
+      </div>
+      <small class="location-time"></small>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
