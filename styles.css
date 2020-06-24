@@ -47,7 +47,6 @@ main {
   display: flex;
   flex-direction: column;
 }
-/* .current img {
-  width: 200px;
-  height: 200px;
-} */
+.current img {
+  margin: 0 auto;
+}

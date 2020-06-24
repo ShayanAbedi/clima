@@ -55,10 +55,15 @@ const callApi = async (location, unit) => {
   locTime.textContent = time;
   // temperature
   const temp = data.current.temperature;
-  currentTemp.textContent = `${temp}`;
+
+  unit === "C"
+    ? (currentTemp.textContent = `${temp} °C `)
+    : (currentTemp.textContent = `${temp} °F`);
   // feels like
   const feels = data.current.feelslike;
-  currentFeels.textContent = `${feels}`;
+  unit === "C"
+    ? (currentFeels.textContent = `${feels} °C`)
+    : (currentFeels.textContent = `${feels} °F`);
   // weather description
   const desc = data.current.weather_descriptions[0];
   currentDesc.textContent = desc;
