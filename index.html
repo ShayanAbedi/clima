@@ -18,12 +18,21 @@
     </div>
     <div class="search-container">
       <form class="search-form">
-        <input type="text" name="search" placeholder="Type in the City" />
+        <input
+          class="search"
+          type="text"
+          name="search"
+          placeholder="Enter A Location"
+        />
+        <br />
         <label for="unit">°C</label>
         <input type="radio" name="unit" value="C" checked />
         <label for="unit">°F</label>
         <input type="radio" name="unit" value="F" />
-        <button type="submit">Search</button>
+        <br />
+        <button class="search-btn" type="submit">
+          Search
+        </button>
       </form>
     </div>
     <main>
@@ -34,13 +43,16 @@
         <span class="location-country"></span>
       </div>
       <div class="current">
-        <span class="current-desc"></span>
         <span class="current-temp"></span>
         <span class="current-feels"></span>
-        <image alt="" class="current-img" width="200px"></image>
+        <br />
+        <span class="current-desc"></span>
+        <br />
       </div>
-      <small class="location-time"></small>
+
+      <img src="" alt="" class="current-img" width="100px" />
     </main>
+    <a href="https://weatherstack.com" class="api">Powered By weatherstack</a>
     <script src="app.js"></script>
   </body>
 </html>

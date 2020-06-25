@@ -9,7 +9,6 @@ const spinner = document.querySelector(".spinner");
 const locName = document.querySelector(".location-name");
 const locRegion = document.querySelector(".location-region");
 const locCountry = document.querySelector(".location-country");
-const locTime = document.querySelector(".location-time");
 
 const currentDesc = document.querySelector(".current-desc");
 const currentTemp = document.querySelector(".current-temp");
@@ -50,20 +49,21 @@ const callApi = async (location, unit) => {
   // location country
   const country = data.location.country;
   locCountry.textContent = country;
-  // local time
-  const time = data.location.localtime;
-  locTime.textContent = time;
+
   // temperature
   const temp = data.current.temperature;
 
   unit === "C"
-    ? (currentTemp.textContent = `${temp} °C `)
-    : (currentTemp.textContent = `${temp} °F`);
+    ? (currentTemp.textContent = `
+    Temperature:  
+    ${temp} °C 
+    `)
+    : (currentTemp.textContent = `Temperature:  ${temp} °F`);
   // feels like
   const feels = data.current.feelslike;
   unit === "C"
-    ? (currentFeels.textContent = `${feels} °C`)
-    : (currentFeels.textContent = `${feels} °F`);
+    ? (currentFeels.textContent = `Feels Like:  ${feels} °C`)
+    : (currentFeels.textContent = `Feels Like:  ${feels} °F`);
   // weather description
   const desc = data.current.weather_descriptions[0];
   currentDesc.textContent = desc;
